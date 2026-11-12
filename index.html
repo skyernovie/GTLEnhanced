@@ -34,7 +34,7 @@ body:has(.photo-dialog[open]){overflow:hidden}
 </style>
 </head>
 <body>
-  <script>/* 首屏预取：索引和星璇号结构尽早开始下载，后续直接复用 */window.__gtlPreload={index:fetch('guide-index.json').then(r=>r.ok?r.json():null).catch(()=>null),hero:fetch('models/stellar_vortex_space_station.json',{cache:'force-cache'}).then(r=>r.ok?r.json():null).catch(()=>null)};</script>
+  <script>/* 首屏预取：索引和星璇号结构尽早开始下载，后续直接复用 */window.__gtlPreload={index:fetch('assets/data/guide-index.json').then(r=>r.ok?r.json():null).catch(()=>null),hero:fetch('models/stellar_vortex_space_station.json',{cache:'force-cache'}).then(r=>r.ok?r.json():null).catch(()=>null)};</script>
   <a class="skip-link" href="#machines">跳到机器图鉴</a>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="GTL 增强核心首页"><span class="brand-mark">GTL<span>+</span></span><span class="brand-name">ENHANCEDCORE<small>增强核心 / 玩家手册</small></span></a>
@@ -42,7 +42,7 @@ body:has(.photo-dialog[open]){overflow:hidden}
   </header>
   <main>
     <section id="home" class="hero">
-      <img class="hero-photo" src="hero-photo.webp" fetchpriority="high" decoding="async" alt="石英工厂主厅，蓝白厂房与宽阔广场" fetchpriority="high">
+      <img class="hero-photo" src="assets/images/hero-photo.webp" fetchpriority="high" decoding="async" alt="石英工厂主厅，蓝白厂房与宽阔广场" fetchpriority="high">
       <div class="hero-shade"></div>
       <div class="hero-inner section-wrap">
         <div class="hero-copy">
@@ -85,7 +85,7 @@ body:has(.photo-dialog[open]){overflow:hidden}
 
     <section id="worlds" class="worlds-section"><div class="section-wrap"><div class="section-heading"><div><p class="eyebrow"><span class="section-number">04</span> CAMPUS</p><h2>私人园区</h2></div><p class="section-intro">厂房、道路、景观与机位。<br>先看看实景，再决定在哪里开工。</p></div>
       <div class="world-tabs" id="world-tabs" role="group" aria-label="选择园区"><button data-world="quartz" class="is-active" aria-pressed="true">石英工厂</button><button data-world="woodland" aria-pressed="false">自然林湖园区</button><button data-world="custom" aria-pressed="false">自由地皮</button></div>
-      <div class="world-layout"><div class="world-map" id="world-map"><button class="open-photo" id="open-photo" aria-label="放大查看园区图片"><img id="world-image" src="hero-photo.webp" loading="lazy" decoding="async" alt="石英工厂主厅外观" loading="lazy"><span class="photo-enlarge">放大查看 ⤢</span></button></div><div class="world-gallery-bar"><p class="world-map-label" id="world-map-label">石英工厂 · 主厅外观</p><div class="photo-controls"><button id="world-photo-prev" aria-label="上一张园区图片">←</button><span id="world-photo-count">1 / 4</span><button id="world-photo-next" aria-label="下一张园区图片">→</button></div></div><div class="world-thumbnails" id="world-thumbnails" aria-label="园区图片"></div><div class="world-copy"><div class="world-main-copy"><span class="world-sequence" id="world-sequence">园区 01</span><h3 id="world-title"></h3><p id="world-description"></p></div><div class="world-facts"><ul id="world-points"></ul><p class="world-note">园区提供场地与建筑，机器需要自己制作。私人维度道具由管理员提供或从创造模式获取；服务器使用已生效的统一模板。</p></div></div></div>
+      <div class="world-layout"><div class="world-map" id="world-map"><button class="open-photo" id="open-photo" aria-label="放大查看园区图片"><img id="world-image" src="assets/images/hero-photo.webp" loading="lazy" decoding="async" alt="石英工厂主厅外观" loading="lazy"><span class="photo-enlarge">放大查看 ⤢</span></button></div><div class="world-gallery-bar"><p class="world-map-label" id="world-map-label">石英工厂 · 主厅外观</p><div class="photo-controls"><button id="world-photo-prev" aria-label="上一张园区图片">←</button><span id="world-photo-count">1 / 4</span><button id="world-photo-next" aria-label="下一张园区图片">→</button></div></div><div class="world-thumbnails" id="world-thumbnails" aria-label="园区图片"></div><div class="world-copy"><div class="world-main-copy"><span class="world-sequence" id="world-sequence">园区 01</span><h3 id="world-title"></h3><p id="world-description"></p></div><div class="world-facts"><ul id="world-points"></ul><p class="world-note">园区提供场地与建筑，机器需要自己制作。私人维度道具由管理员提供或从创造模式获取；服务器使用已生效的统一模板。</p></div></div></div>
     </div></section>
 
     <section class="field-kit section-wrap"><div class="section-heading"><div><p class="eyebrow"><span class="section-number">05</span> WORKSHOP</p><h2>车间里的小帮手</h2></div></div><div class="utility-list"><div><span>01</span><h3>电路编码仓</h3><p>可直接选择 0–32 号电路，无需放入实体电路。</p></div><div><span>02</span><h3>末晶谐振器</h3><p>正上方放一颗末影水晶，持续无线发电，水晶不消耗。</p></div><div><span>03</span><h3>无线充能器</h3><p>为附近已加载的 GT 单方块机器充能，费用由所属无线电网支付。</p></div><div><span>04</span><h3>气象锚点</h3><p>白昼或黑夜，晴天、雨天或雷暴。供电时可分别选择、组合。</p></div><div><span>05</span><h3>领地置换终端</h3><p>使用背包或 AE 中的材料，在队伍强加载领地里逐块换材。</p></div><div><span>06</span><h3>自适应维护仓</h3><p>处理维护、洁净室和特定重力条件，安装前先看结构是否支持。</p></div></div></section>
@@ -555,8 +555,8 @@ body:has(.photo-dialog[open]){overflow:hidden}
   <script>(async () => {
   'use strict';
   const preload = window.__gtlPreload || {};
-  const data = (await preload.index) || await fetch('guide-index.json').then(response => response.json());
-  const PHOTOS_FILE = 'guide-photos.json';
+  const data = (await preload.index) || await fetch('assets/data/guide-index.json').then(response => response.json());
+  const PHOTOS_FILE = 'assets/data/guide-photos.json';
   const $ = id => document.getElementById(id);
   const sourceMachines = data.machines;
   const priority = ['stellar_confinement_fusion_reactor', 'eye_of_harmony', 'stellar_vortex_space_station', 'arcanic_astrograph', 'large_furnace', 'industrial_steam_platform', 'universal_joint_factory', 'super_particle_collider', 'fuxi_bagua_heaven_forging_furnace'];
